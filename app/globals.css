@@ -8,6 +8,7 @@
   --font-franklin:"Franklin";
   --font-amaranath:"Amaranth";
   --font-alkatra:"Alkatra";
+  
   --color-primary: #280116; /* Tailwind generates utility classes from this */
   --color-secondary:#3c1728;
   --color-primarysec:#d1c1b4;

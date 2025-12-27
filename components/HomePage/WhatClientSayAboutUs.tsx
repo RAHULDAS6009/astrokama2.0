@@ -1,4 +1,6 @@
 import React from "react";
+import OrbitAvatars from "./OrbitAvatar/OrbitAvatar";
+import CircularAvatarCarousel from "./OrbitAvatar/OrbitAvatar";
 
 const WhatClientSayAboutUs = () => {
   return (
@@ -9,6 +11,8 @@ const WhatClientSayAboutUs = () => {
           {/* WHY + HOW */}
           <VideoBackgroundSection />
           {/* REMEDIES */}
+          <CircularAvatarCarousel />
+
           <div>
             <h3 className="text-orange-400 font-semibold mb-8 text-center">
               Remedies I Offer:
