@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
 
@@ -7,6 +7,7 @@
 @theme {
   --font-franklin:"Franklin";
   --font-amaranath:"Amaranth";
+  --font-alkatra:"Alkatra";
   --color-primary: #280116; /* Tailwind generates utility classes from this */
   --color-secondary:#3c1728;
   --color-primarysec:#d1c1b4;
@@ -22,6 +23,23 @@
    --padding: 1rem 4rem;
   --font-family: monospace;
   --step: 0.5rem;
+}
+
+.archivo-normal {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 104;
+}
+
+
+.alkatra-static {
+  font-family: "Alkatra", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .courgette-regular {

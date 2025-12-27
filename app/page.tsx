@@ -1,5 +1,9 @@
 "use client";
 import GetConsultancyFormandKusti from "@/components/GetConsultancyAndKusti";
+import { Hero } from "@/components/HomePage/Hero";
+import ModernAstrology from "@/components/HomePage/ModernAstrology";
+import ServicesOfferedAndKusti from "@/components/HomePage/ServicesOfferedAndKusti";
+import WhatClientSayAboutUs from "@/components/HomePage/WhatClientSayAboutUs";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -9,6 +13,10 @@ export default function Home() {
     <div className="">
       <Header />
       <Hero />
+      <ModernAstrology />
+      <WhatClientSayAboutUs />
+      <ServicesOfferedAndKusti />
+
       <div className="w-full h-full flex justify-center items-center ">
         <div className="w-[30%]">
           {/* <GetConsultancyFormandKusti
@@ -21,31 +29,9 @@ export default function Home() {
   );
 }
 
-function Hero() {
-  return (
-    <div className="h-screen  bg-[linear-gradient(176deg,#280116_60%,#d1c1b4_60%)]">
-      {/* <div className="bg-primary h-[80%] absolute"></div>
-      <div className="bg-primarysec h-[20%] absolute"></div> */}
-      <div className="flex items-center gap-12 max-w-7xl mx-auto translate-y-28">
-        <Image
-          className="rounded-2xl"
-          src={"/dummyBanner.png"}
-          alt="banner"
-          width={800}
-          height={800}
-        />
-        <GetConsultancyFormandKusti
-          title="Get Consultancy"
-          buttonTitle="Clik For Next Process"
-        />
-      </div>
-    </div>
-  );
-}
-
 export function Header() {
   return (
-    <div className="bg-primary w-full border border-white">
+    <div className="bg-primary w-full border border-b-white">
       <div className="  flex  justify-between items-center max-w-350 py-5 mx-auto">
         <div className="flex flex-col justify-center">
           <span className="courgette-regular text-orange-500">
@@ -126,8 +112,6 @@ function Navigation() {
     </div>
   );
 }
-
-function Badge() {}
 
 function CTAButton() {
   return (
