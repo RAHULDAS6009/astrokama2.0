@@ -1,26 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@theme {
+  --font-franklin:"Franklin";
+  --font-amaranath:"Amaranth";
+  --color-primary: #280116; /* Tailwind generates utility classes from this */
+  --color-secondary:#3c1728;
+  --color-primarysec:#d1c1b4;
+  --color-ctabtn:#cb2d73;
+  --color-formbg:#6c4758;
+  --color-navbg:#482739;
+  --color-text:#280116;
+  --color-ctabtn2:#016993;
+  --color-nxtprocessbg:#9fc9e4;
+   /* --bg-color-1: #cb2d73; */
+  --bg-color-2: #cb2d73;
+  --bg-color-3: #15abe6;
+   --padding: 1rem 4rem;
+  --font-family: monospace;
+  --step: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.courgette-regular {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.angled-background{
+  background-image: linear-gradient(180deg, red 70%, yellow 70%)
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+.libre-franklin-medium {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+.layer-btn {
+  --active: 0;
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: white; 
+  width: 180px;          /* ✅ fixed width */
+  height: 40px;   
+  
+}
+
+.layer-btn:is(:hover, :focus-visible) {
+  --active: 1;
+}
+
+.layer-btn:active {
+  --active: 0.5;
+}
+
+.layer-btn span {
+  inset: 0;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 2px solid black;
+  transition: 0.2s ease;
+  background: var(--bg);
+  translate:
+    calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+    calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
+}
+
+.layer-btn span:first-of-type {
+  position: relative;
+  padding: var(--padding);
+}
+
+.layer-btn span:nth-of-type(1) {
+  --bg: var(--bg-color-3);
+}
+
+.layer-btn span:nth-of-type(2) {
+  --coefficient: 1;
+  --bg: var(--bg-color-2);
+}
+
+.layer-btn span:nth-of-type(3) {
+  --coefficient: 2;
+  --bg: var(--bg-color-1);
+}
+
+[aria-hidden] {
+  color: transparent;
 }
