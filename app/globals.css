@@ -12,6 +12,7 @@
   --color-primary: #280116; /* Tailwind generates utility classes from this */
   --color-secondary:#3c1728;
   --color-primarysec:#d1c1b4;
+
   --color-ctabtn:#cb2d73;
   --color-formbg:#6c4758;
   --color-navbg:#482739;
@@ -63,11 +64,13 @@
 
 
 .layer-btn {
-  --active: 0;
+  --active: 1;
   position: relative;
   padding: 0;
   border: 0;
   background: transparent;
+
+    transform: rotate3d(2,2,10,-2deg); 
   
   cursor: pointer;
   font-family: var(--font-family);
@@ -78,12 +81,12 @@
   
 }
 
-.layer-btn:is(:hover, :focus-visible) {
+/* .layer-btn:is(:hover, :focus-visible) {
   --active: 1;
-}
+} */
 
 .layer-btn:active {
-  --active: 0.5;
+  --active: 0;
 }
 
 .layer-btn span {

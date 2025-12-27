@@ -6,8 +6,7 @@ type ButtonProps = {
 };
 
 function Button({ title, type, color, onClick }: ButtonProps) {
-  const baseClasses =
-    "font-franklin text-base font-bold px-4 py-1.5 rounded-lg font-medium ";
+  const baseClasses = "font-franklin px-4 py-1.5 rounded-lg font-bold ";
 
   const gradientClasses =
     "bg-gradient-to-r  from-nxtprocessbg via-white to-nxtprocessbg text-black";
