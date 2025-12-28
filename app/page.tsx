@@ -31,22 +31,22 @@ export default function Home() {
 export function Header() {
   return (
     <div className=" w-full  ">
-      <div className="bg-primary w-full grid grid-cols-6 text-center justify-between items-center  ">
-        <div className="flex flex-col col-span-1 justify-center">
-          <span className="courgette-regular text-orange-500 text-xl">
+      <div className="bg-primary w-full grid grid-cols-6  justify-between items-center  ">
+        <div className="flex flex-col col-span-2   h-full lg:pl-5  lg:pt-10   justify-center ">
+          <span className="courgette-regular text-orange-500 text-xl lg:text-2xl w-full ">
             Astrologer Suvendu paul
           </span>
           <div>
-            <span className="rounded-md px-2 bg-white text-primary font-amaranath text-center">
+            <span className="text-xs lg:text-xl rounded-md px-2 bg-white text-primary font-amaranath text-center">
               Krishnamurti Paddhati
             </span>
           </div>
         </div>
-        <div className="col-span-3 py-5 max-w-2xl mx-auto ">
+        <div className="col-span-2 py-5 max-w-2xl mx-auto ">
           <Navigation />
         </div>
         <div className="col-span-2 pt-6  bg-secondary h-full flex justify-center gap-5 items-center">
-          <span className="font-amaranath text-amber-200 text-2xl">
+          <span className="font-amaranath text-amber-200 text-2xl lg:text-3xl">
             +91 9748 5888 62
           </span>
           <CTAButton />
@@ -99,7 +99,7 @@ function Navigation() {
     return isactive === url;
   }
   return (
-    <div className="shadow-lg shadow-amber-300/50 fixed top-4 left-[25%] z-50 border border-amber-100 rounded-full flex  justify-between items-center gap-8 px-8 h-10 bg-secondary">
+    <div className="shadow-lg shadow-amber-300/50 fixed top-16 left-[25%] z-50 border border-amber-100 rounded-2xl flex  justify-between items-center gap-8 px-8 h-10 bg-secondary">
       {navLinks.map((nav, index) => {
         return (
           <div
@@ -122,9 +122,9 @@ function Navigation() {
 
 function CTAButton() {
   return (
-    <button className="layer-btn h-10">
-      <span></span>
-      <span className="font-amaranath text-amber-200 h-10 text-2xl">
+    <button className="layer-btn h-16">
+      <span className="h-16"></span>
+      <span className="font-amaranath text-amber-200 h-16 text-2xl lg:text-4xl">
         Book Now
       </span>
     </button>

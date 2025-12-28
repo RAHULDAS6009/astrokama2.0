@@ -41,7 +41,7 @@ function GetConsultancyFormandKusti({
   };
 
   return (
-    <div className="w-full h-full rounded-2xl border overflow-hidden">
+    <div className="w-full h-full rounded-[50px] border overflow-hidden">
       {/* Header */}
       <div className="bg-primarysec text-3xl text-secondary text-center py-3 font-semibold font-amaranath">
         {title}
@@ -161,7 +161,7 @@ const TextInput = ({
     onChange={onChange}
     type="text"
     placeholder={placeholder}
-    className="w-full px-4 py-2 rounded-md bg-white outline-none text-sm"
+    className="w-full px-4 py-2 rounded-xl bg-white outline-none text-sm"
   />
 );
 
@@ -186,7 +186,7 @@ const MiniInput = ({
 );
 
 const InputBox = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-center gap-1 bg-white rounded-md px-2 py-2">
+  <div className="flex items-center gap-1 bg-white rounded-xl px-2 py-2">
     {children}
   </div>
 );
@@ -203,7 +203,7 @@ const SelectInput = ({
   <select
     value={value}
     onChange={onChange}
-    className="w-full px-4 py-2 rounded-md bg-white outline-none text-sm"
+    className="w-full px-4 py-2 rounded-xl bg-white outline-none text-sm"
   >
     {children}
   </select>

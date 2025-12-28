@@ -7,7 +7,7 @@ export function Hero() {
       className="
       min-h-screen w-full
     bg-[linear-gradient(to_right,#280116_66.6%,#3c1728_66.6%),linear-gradient(#d1c1b4,#d1c1b4)]
-    bg-[length:100%_80%,100%_80%]
+    bg-[length:100%_70%,100%_70%]
     bg-[position:top,bottom]
     bg-no-repeat
     "
@@ -19,7 +19,7 @@ export function Hero() {
             src="/dummyBanner.png"
             alt="banner"
             fill
-            className="object-cover rounded-2xl"
+            className=" rounded-2xl"
           />
         </div>
 
