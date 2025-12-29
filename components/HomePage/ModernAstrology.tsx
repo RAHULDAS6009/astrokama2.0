@@ -13,9 +13,9 @@ const modernAstrologyPoints = [
 
 const ModernAstrology = () => {
   return (
-    <section className="bg-primary text-white min-h-[695px] h-full">
+    <section className="bg-secondary text-white min-h-[695px] h-full">
       <div className="flex  h-full">
-        <div className="w-[63%] h-[15%] h-full bg-[#371326]">
+        <div className="w-[63%]  h-[15%] h-full ">
           {/* Header */}
           <div>
             <div className="text-center bg-primary px-4 py-6">
@@ -32,7 +32,7 @@ const ModernAstrology = () => {
             </div>
           </div>
 
-          <div className="h-[80%] flex flex-col  max-w-3xl mx-auto">
+          <div className="h-[80%] flex flex-col  max-w-3xl mx-auto ">
             <div className="h-1/2 flex py-4">
               <div className="w-1/2 h-full">
                 <div className="flex-1 flex flex-col justify-center gap-8 h-full">
@@ -93,7 +93,7 @@ const ModernAstrology = () => {
         </div>
 
         {/* RIGHT REVIEW FORM */}
-        <div className="w-[37%] bg-[#3c1728] rounded-md flex flex-col">
+        <div className="w-[37%] bg-[#3c1728]  flex flex-col  border-b-1 border-l-2 rounded-b-2xl border-primary ">
           <h3 className="bg-orange-500 font-amaranath rounded-b-full text-xl text-white text-center py-3 font-semibold">
             Write A Review After Consultancy
           </h3>

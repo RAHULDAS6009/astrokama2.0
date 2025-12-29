@@ -5,7 +5,7 @@ const WhatClientSayAboutUs = () => {
     <section className="bg-[var(--color-primary)] w-full text-white ">
       <div className=" mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* LEFT CONTENT */}
-        <div className="lg:col-span-2 space-y-12">
+        <div className=" space-y-12">
           {/* WHY + HOW */}
           <VideoBackgroundSection />
           {/* REMEDIES */}
@@ -92,7 +92,7 @@ const WhatClientSayAboutUs = () => {
   );
 };
 
-function VideoBackgroundSection() {
+export function VideoBackgroundSection() {
   return (
     <section className="relative   min-h-[80vh]  px-10 overflow-hidden ">
       {/* Background Video */}

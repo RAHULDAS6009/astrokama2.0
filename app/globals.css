@@ -9,6 +9,8 @@
   --font-amaranath:"Amaranth";
   --font-alkatra:"Alkatra";
 
+  --font-archivo:"Archivo";
+
   --font-courgette:"Courgette";
   
   --color-primary: #280116; /* Tailwind generates utility classes from this */
