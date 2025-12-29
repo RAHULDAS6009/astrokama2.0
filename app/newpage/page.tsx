@@ -4,9 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { CTAButton, Navigation } from "../page";
 import GetConsultancyFormandKusti from "@/components/GetConsultancyAndKusti";
-import { VideoBackgroundSection } from "@/components/HomePage/WhatClientSayAboutUs";
-import CircularAvatarCarousel from "@/components/HomePage/OrbitAvatar/OrbitAvatar";
-import TestimonialCards from "@/components/HomePage/TestimonialSection";
+
 import Remaining from "@/components/HomePage/Remaining";
 
 const Page = () => {

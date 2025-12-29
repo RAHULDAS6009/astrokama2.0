@@ -94,10 +94,10 @@ const WhatClientSayAboutUs = () => {
 
 export function VideoBackgroundSection() {
   return (
-    <section className="relative   min-h-[80vh]  px-10 overflow-hidden ">
-      {/* Background Video */}
+    <section className="relative min-h-[80vh] px-10 m-10 overflow-hidden flex items-center justify-center">
+      {/* BACKGROUND VIDEO */}
       <video
-        className="absolute top-2 left-8 h-[95%] object-contain   rounded-[5rem]"
+        className="absolute inset-0 w-full h-full object-cover rounded-[5rem]"
         src="/servicesVideo.mp4"
         autoPlay
         muted
@@ -105,81 +105,28 @@ export function VideoBackgroundSection() {
         playsInline
       />
 
-      {/* Dark overlay for readability */}
+      {/* DARK OVERLAY (optional but recommended) */}
+      <div className="absolute inset-0 bg-black/30 rounded-[5rem]" />
 
-      <div className="flex">
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 ">
-          <div
-            className="
-    backdrop-blur-xl
-    bg-white/10
-    border border-white/20
-    rounded-3xl
-    p-8
-    text-white
-    shadow-[0_0_40px_rgba(255,140,0,0.18)]
-  "
-          >
-            <h3 className="text-orange-400 text-lg font-semibold mb-4">
-              Why Clients Choose Me
-            </h3>
-
-            <ul className="space-y-3 text-sm leading-relaxed">
-              <li>
-                <span className="text-orange-400 font-semibold">
-                  Modern Refinement:
-                </span>{" "}
-                My own techniques make predictions more relevant and precise.
-              </li>
-
-              <li>
-                <span className="text-pink-400 font-semibold">
-                  Scientific Accuracy:
-                </span>{" "}
-                KP calculation methods form the backbone of my practice.
-              </li>
-
-              <li>
-                <span className="text-green-400 font-semibold">
-                  Client Satisfaction:
-                </span>{" "}
-                Lasting clarity and fulfillment for every consultation.
-              </li>
-
-              <li>
-                <span className="text-purple-400 font-semibold">
-                  Personalized Sessions:
-                </span>{" "}
-                30+ minute detailed consultations with written guidance.
-              </li>
-
-              <li>
-                <span className="text-yellow-400 font-semibold">
-                  Privacy & Trust:
-                </span>{" "}
-                Complete confidentiality with every client.
-              </li>
-            </ul>
-          </div>
-        </div>
-
+      {/* CENTER CONTENT */}
+      <div className="relative z-10 max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* CARD 1 */}
         <div
           className="
-    backdrop-blur-xl
-    bg-white/10
-    border border-white/20
-    rounded-3xl
-    p-8
-    text-white
-    shadow-[0_0_40px_rgba(255,140,0,0.18)]
-  "
+            backdrop-blur-xl
+            bg-white/10
+            border border-white/20
+            rounded-3xl
+           overflow-hidden
+            text-white
+            shadow-[0_0_40px_rgba(255,140,0,0.18)]
+          "
         >
-          <h3 className="text-orange-400 text-lg font-semibold mb-4">
+          <h3 className="text-orange-400 py-1 text-2xl font-semibold mb-4  bg-[#33003a] font-amaranath w-full text-center">
             Why Clients Choose Me
           </h3>
 
-          <ul className="space-y-3 text-sm leading-relaxed">
+          <ul className="space-y-3 pb-4 font-amaranath  text-right px-8 text-sm leading-relaxed">
             <li>
               <span className="text-orange-400 font-semibold">
                 Modern Refinement:
@@ -214,6 +161,27 @@ export function VideoBackgroundSection() {
               </span>{" "}
               Complete confidentiality with every client.
             </li>
+          </ul>
+        </div>
+        <div
+          className="
+            backdrop-blur-xl
+            bg-white/10
+            border border-white/20
+            rounded-3xl
+           overflow-hidden
+            text-white
+            shadow-[0_0_40px_rgba(255,140,0,0.18)]
+          "
+        >
+          <h3 className="text-orange-400 py-1 text-2xl font-semibold mb-4  bg-[#33003a] font-amaranath w-full text-center">
+            How I consult
+          </h3>
+
+          <ul className="font-amaranath space-y-3  px-8 text-sm leading-relaxed">
+            <li>Phone Call</li>
+            <li>Video Calls</li>
+            <li>Offline Session at my chamber tollygunge</li>
           </ul>
         </div>
       </div>
