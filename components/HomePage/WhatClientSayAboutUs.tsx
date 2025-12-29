@@ -1,11 +1,9 @@
-import React from "react";
-import OrbitAvatars from "./OrbitAvatar/OrbitAvatar";
 import CircularAvatarCarousel from "./OrbitAvatar/OrbitAvatar";
 
 const WhatClientSayAboutUs = () => {
   return (
-    <section className="bg-[var(--color-primary)] text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <section className="bg-[var(--color-primary)] w-full text-white ">
+      <div className=" mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* LEFT CONTENT */}
         <div className="lg:col-span-2 space-y-12">
           {/* WHY + HOW */}
@@ -96,10 +94,10 @@ const WhatClientSayAboutUs = () => {
 
 function VideoBackgroundSection() {
   return (
-    <section className="relative w-full min-h-[80vh] overflow-hidden">
+    <section className="relative   min-h-[80vh]  px-10 overflow-hidden ">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-2 left-8 h-[95%] object-contain   rounded-[5rem]"
         src="/servicesVideo.mp4"
         autoPlay
         muted
@@ -108,63 +106,115 @@ function VideoBackgroundSection() {
       />
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
-        <div className=" backdrop-blur-md rounded-3xl p-8 grid md:grid-cols-2 gap-8">
-          {/* WHY CLIENTS */}
-          <div>
-            <h3 className="text-orange-400 font-semibold mb-4">
+      <div className="flex">
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 ">
+          <div
+            className="
+    backdrop-blur-xl
+    bg-white/10
+    border border-white/20
+    rounded-3xl
+    p-8
+    text-white
+    shadow-[0_0_40px_rgba(255,140,0,0.18)]
+  "
+          >
+            <h3 className="text-orange-400 text-lg font-semibold mb-4">
               Why Clients Choose Me
             </h3>
-            <ul className="space-y-2 text-sm text-gray-200">
+
+            <ul className="space-y-3 text-sm leading-relaxed">
               <li>
                 <span className="text-orange-400 font-semibold">
-                  Accurate Predictions:
+                  Modern Refinement:
                 </span>{" "}
-                Result-oriented guidance based on KP Astrology
+                My own techniques make predictions more relevant and precise.
               </li>
+
               <li>
-                <span className="text-orange-400 font-semibold">
-                  Simple Remedies:
+                <span className="text-pink-400 font-semibold">
+                  Scientific Accuracy:
                 </span>{" "}
-                Practical solutions without superstition
+                KP calculation methods form the backbone of my practice.
               </li>
+
               <li>
-                <span className="text-orange-400 font-semibold">
+                <span className="text-green-400 font-semibold">
                   Client Satisfaction:
                 </span>{" "}
-                Trust built through clarity and honesty
+                Lasting clarity and fulfillment for every consultation.
               </li>
-              <li>
-                <span className="text-orange-400 font-semibold">
-                  Personalized Care:
-                </span>{" "}
-                Each chart studied individually
-              </li>
-              <li>
-                <span className="text-orange-400 font-semibold">
-                  Proven Track Record:
-                </span>{" "}
-                Years of consistent results
-              </li>
-            </ul>
-          </div>
 
-          {/* HOW I CONSULT */}
-          <div>
-            <h3 className="text-orange-400 font-semibold mb-4">
-              How I Consult
-            </h3>
-            <ul className="space-y-2 text-sm text-gray-200 list-disc list-inside">
-              <li>In-depth discussion and problem analysis</li>
-              <li>Date, Time & Place based chart analysis</li>
-              <li>KP sub-lord and cuspal study</li>
-              <li>Clear predictions with timelines</li>
-              <li>Simple & effective remedies</li>
+              <li>
+                <span className="text-purple-400 font-semibold">
+                  Personalized Sessions:
+                </span>{" "}
+                30+ minute detailed consultations with written guidance.
+              </li>
+
+              <li>
+                <span className="text-yellow-400 font-semibold">
+                  Privacy & Trust:
+                </span>{" "}
+                Complete confidentiality with every client.
+              </li>
             </ul>
           </div>
+        </div>
+
+        <div
+          className="
+    backdrop-blur-xl
+    bg-white/10
+    border border-white/20
+    rounded-3xl
+    p-8
+    text-white
+    shadow-[0_0_40px_rgba(255,140,0,0.18)]
+  "
+        >
+          <h3 className="text-orange-400 text-lg font-semibold mb-4">
+            Why Clients Choose Me
+          </h3>
+
+          <ul className="space-y-3 text-sm leading-relaxed">
+            <li>
+              <span className="text-orange-400 font-semibold">
+                Modern Refinement:
+              </span>{" "}
+              My own techniques make predictions more relevant and precise.
+            </li>
+
+            <li>
+              <span className="text-pink-400 font-semibold">
+                Scientific Accuracy:
+              </span>{" "}
+              KP calculation methods form the backbone of my practice.
+            </li>
+
+            <li>
+              <span className="text-green-400 font-semibold">
+                Client Satisfaction:
+              </span>{" "}
+              Lasting clarity and fulfillment for every consultation.
+            </li>
+
+            <li>
+              <span className="text-purple-400 font-semibold">
+                Personalized Sessions:
+              </span>{" "}
+              30+ minute detailed consultations with written guidance.
+            </li>
+
+            <li>
+              <span className="text-yellow-400 font-semibold">
+                Privacy & Trust:
+              </span>{" "}
+              Complete confidentiality with every client.
+            </li>
+          </ul>
         </div>
       </div>
     </section>

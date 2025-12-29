@@ -8,6 +8,8 @@
   --font-franklin:"Franklin";
   --font-amaranath:"Amaranth";
   --font-alkatra:"Alkatra";
+
+  --font-courgette:"Courgette";
   
   --color-primary: #280116; /* Tailwind generates utility classes from this */
   --color-secondary:#3c1728;
@@ -30,7 +32,7 @@
 .archivo-normal {
   font-family: "Archivo", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "wdth" 104;
@@ -49,6 +51,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 
 .angled-background{
   background-image: linear-gradient(180deg, red 70%, yellow 70%)

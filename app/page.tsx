@@ -68,10 +68,7 @@ const navLinks = [
     title: "Courses",
     url: "/courses",
   },
-  {
-    title: "Product",
-    url: "/product",
-  },
+
   {
     title: "Student Corner",
     url: "/studentcorner",
@@ -81,11 +78,15 @@ const navLinks = [
     url: "/gallery",
   },
   {
+    title: "Product",
+    url: "/product",
+  },
+  {
     title: "Contact",
     url: "/contact",
   },
 ];
-function Navigation() {
+export function Navigation() {
   const router = useRouter();
   const pathName = usePathname();
   const [isactive, setIsActive] = useState("/");
@@ -99,7 +100,7 @@ function Navigation() {
     return isactive === url;
   }
   return (
-    <div className="shadow-lg shadow-amber-300/50 fixed top-16 left-[25%] z-50 border border-amber-100 rounded-2xl flex  justify-between items-center gap-8 px-8 h-10 bg-secondary">
+    <div className="shadow-lg shadow-amber-300/50 border border-amber-100 rounded-2xl flex  justify-between items-center gap-8 px-8 h-8 bg-secondary">
       {navLinks.map((nav, index) => {
         return (
           <div
@@ -120,11 +121,11 @@ function Navigation() {
   );
 }
 
-function CTAButton() {
+export function CTAButton() {
   return (
-    <button className="layer-btn h-16">
-      <span className="h-16"></span>
-      <span className="font-amaranath text-amber-200 h-16 text-2xl lg:text-4xl">
+    <button className="layer-btn h-14">
+      <span className="h-14"></span>
+      <span className="font-amaranath text-amber-200 h-14 text-2xl lg:text-3xl">
         Book Now
       </span>
     </button>

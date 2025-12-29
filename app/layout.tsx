@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Courgette, Geist, Geist_Mono } from "next/font/google";
 
 import { Amaranth } from "next/font/google";
 
@@ -13,6 +13,12 @@ export const amaranth = Amaranth({
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+export const courgette = Courgette({
+  subsets: ["latin"],
+  weight: "400", // Courgette only has Regular
+  variable: "--font-courgette",
 });
 
 const geistMono = Geist_Mono({
@@ -32,11 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`  antialiased`}>{children}</body>
     </html>
   );
 }
