@@ -1,133 +1,86 @@
 "use client";
-import GetConsultancyFormandKusti from "@/components/GetConsultancyAndKusti";
-import { Hero } from "@/components/HomePage/Hero";
 import ModernAstrology from "@/components/HomePage/ModernAstrology";
-import ServicesOfferedAndKusti from "@/components/HomePage/ServicesOfferedAndKusti";
-import WhatClientSayAboutUs from "@/components/HomePage/WhatClientSayAboutUs";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import React from "react";
+import GetConsultancyFormandKusti from "@/components/GetConsultancyAndKusti";
 
-export default function Home() {
+import Remaining from "@/components/HomePage/Remaining";
+import MySvg from "@/components/MySvg";
+import Skew3DButton from "@/components/Skew3DButton";
+import { CTAButton, Navigation } from "@/components/common/Header";
+
+const Page = () => {
   return (
-    <div className="">
-      <Header />
-      <Hero />
+    <div className="h-screen w-full">
+      {/* <div className="my-10">
+        <Skew3DButton />
+      </div> */}
+      <div
+        className="
+          w-full h-full
+          bg-[linear-gradient(to_right,#280116_63%,#3c1728_63%),linear-gradient(#d1c1b4,#d1c1b4)]
+          bg-[length:100%_83%,100%_17%]
+          bg-[position:top,bottom]
+          bg-no-repeat
+        "
+      >
+        {/* TOP SECTION */}
+        <div className="h-[83%] w-full flex">
+          <div className="w-[63%] flex items-center justify-center text-white">
+            <div className="max-w-[865px] mx-auto ">
+              <div className=" flex w-full">
+                <div className="w-[35%] flex flex-col   translate-y-10">
+                  <span
+                    className={`font-courgette courgette-regular  text-orange-500 text-xl lg:text-[1.375rem] w-full `}
+                  >
+                    Astrologer Suvendu Paul
+                  </span>
+
+                  <span className="text-xs  lg:text-xl rounded-md px-2 bg-white text-primary font-amaranath text-center w-[230px] height-[35px]">
+                    Krishnamurti Paddhati
+                  </span>
+                </div>
+                <div className="w-[65%]  rounded-full h-2 translate-y-15.5">
+                  <Navigation />
+                </div>
+              </div>
+              <div className="h-[67%]  translate-y-24">
+                <Image
+                  src="/dummyBanner.png"
+                  alt="banner"
+                  width={856}
+                  height={482}
+                  className=" rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="w-[37%]  text-white">
+            <div className="max-w-[470px] mx-auto h-full flex flex-col items-center     justify-center ">
+              <div className="flex gap-5 -translate-y-6">
+                <span className="font-amaranath text-amber-200 text-2xl lg:text-3xl">
+                  +91 9748 5888 62
+                </span>
+                <CTAButton />
+              </div>
+              <div className="">
+                <GetConsultancyFormandKusti
+                  title="Get Consultancy"
+                  buttonTitle="Click For Next Process"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM SECTION */}
+        <div className="h-[17%] w-full" />
+      </div>
       <ModernAstrology />
-      <WhatClientSayAboutUs />
-      <ServicesOfferedAndKusti />
-
-      <div className="w-full h-full flex justify-center items-center ">
-        <div className="w-[30%]">
-          {/* <GetConsultancyFormandKusti
-            title="Get Consultancy"
-            buttonTitle="Click On Next Process"
-          /> */}
-        </div>
-      </div>
+      <Remaining />
     </div>
   );
-}
+};
 
-export function Header() {
-  return (
-    <div className=" w-full  ">
-      <div className="bg-primary w-full grid grid-cols-6  justify-between items-center  ">
-        <div className="flex flex-col col-span-2   h-full lg:pl-5  lg:pt-10   justify-center ">
-          <span className="courgette-regular text-orange-500 text-xl lg:text-2xl w-full ">
-            Astrologer Suvendu paul
-          </span>
-          <div>
-            <span className="text-xs lg:text-xl rounded-md px-2 bg-white text-primary font-amaranath text-center">
-              Krishnamurti Paddhati
-            </span>
-          </div>
-        </div>
-        <div className="col-span-2 py-5 max-w-2xl mx-auto ">
-          <Navigation />
-        </div>
-        <div className="col-span-2 pt-6  bg-secondary h-full flex justify-center gap-5 items-center">
-          <span className="font-amaranath text-amber-200 text-2xl lg:text-3xl">
-            +91 9748 5888 62
-          </span>
-          <CTAButton />
-        </div>
-      </div>
-    </div>
-  );
-}
-const navLinks = [
-  {
-    title: "Home",
-    url: "/",
-  },
-  {
-    title: "Consultancy",
-    url: "/consultancy",
-  },
-  {
-    title: "Courses",
-    url: "/courses",
-  },
-
-  {
-    title: "Student Corner",
-    url: "/studentcorner",
-  },
-  {
-    title: "Gallery",
-    url: "/gallery",
-  },
-  {
-    title: "Product",
-    url: "/product",
-  },
-  {
-    title: "Contact",
-    url: "/contact",
-  },
-];
-export function Navigation() {
-  const router = useRouter();
-  const pathName = usePathname();
-  const [isactive, setIsActive] = useState("/");
-
-  useEffect(() => {
-    setIsActive(pathName);
-  }, []);
-
-  function activeTab(url: string) {
-    console.log(isactive);
-    return isactive === url;
-  }
-  return (
-    <div className="shadow-lg shadow-amber-300/50 border border-amber-100 rounded-2xl flex  justify-between items-center gap-8 px-8 h-8 bg-secondary">
-      {navLinks.map((nav, index) => {
-        return (
-          <div
-            key={index}
-            onClick={() => {
-              router.push(`${nav.url}`);
-              setIsActive(nav.url);
-            }}
-            className={`${
-              activeTab(nav.url) ? "text-orange-400" : "text-white"
-            } text-[10px] cursor-pointer`}
-          >
-            {nav.title}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-export function CTAButton() {
-  return (
-    <button className="layer-btn h-14">
-      <span className="h-14"></span>
-      <span className="font-amaranath text-amber-200 h-14 text-2xl lg:text-3xl">
-        Book Now
-      </span>
-    </button>
-  );
-}
+export default Page;

@@ -1,133 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import "tailwindcss";
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+  @import "tailwindcss";
 
 
 
-@theme {
-  --font-franklin:"Franklin";
-  --font-amaranath:"Amaranth";
-  --font-alkatra:"Alkatra";
+  @theme {
+    --font-franklin:"Franklin";
+    --font-amaranath:"Amaranth";
+    --font-alkatra:"Alkatra";
 
-  --font-archivo:"Archivo";
+    --font-archivo:"Archivo";
 
-  --font-courgette:"Courgette";
-  
-  --color-primary: #280116; /* Tailwind generates utility classes from this */
-  --color-secondary:#3c1728;
-  --color-primarysec:#d1c1b4;
+    --font-courgette:"Courgette";
+    
+    --color-primary: #280116; /* Tailwind generates utility classes from this */
+    --color-secondary:#3c1728;
+    --color-primarysec:#d1c1b4;
 
-  --color-ctabtn:#cb2d73;
-  --color-formbg:#6c4758;
-  --color-navbg:#482739;
-  --color-text:#280116;
-  --color-ctabtn2:#016993;
-  --color-nxtprocessbg:#9fc9e4;
-   /* --bg-color-1: #cb2d73; */
-  --bg-color-2: #cb2d73;
-  --bg-color-3: #15abe6;
-   --padding: 1rem 4rem;
-  --font-family: monospace;
-  --step: 0.5rem;
-}
-
-
-
-.archivo-normal {
-  font-family: "Archivo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 104;
-}
+    --color-formbg:#6c4758;
+    --color-ctabtn:#cb2d73;
+    --color-navbg:#482739;
+    --color-text:#280116;
+    --color-ctabtn2:#016993;
+    --color-nxtprocessbg:#9fc9e4;
+    /* --bg-color-1: #cb2d73; */
+    --bg-color-2: #cb2d73;
+    --bg-color-3: #15abe6;
+    --padding: 1rem 4rem;
+    --font-family: monospace;
+    --step: 0.5rem;
+  }
 
 
-.alkatra-static {
-  font-family: "Alkatra", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.courgette-regular {
-  font-family: "Courgette", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
+  .archivo-normal {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 104;
+  }
 
 
-.angled-background{
-  background-image: linear-gradient(180deg, red 70%, yellow 70%)
-}
+  .alkatra-static {
+    font-family: "Alkatra", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 
-.libre-franklin-medium {
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
+  .angled-background{
+    background-image: linear-gradient(180deg, red 70%, yellow 70%)
+  }
 
 
-.layer-btn {
-  --active: 1;
-  position: relative;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  .libre-franklin-medium {
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
 
-    transform: rotate3d(2,2,10,-2deg); 
-  
-  cursor: pointer;
-  font-family: var(--font-family);
-  font-weight: bold;
-  color: white; 
-  width: 180px;          /* ✅ fixed width */
-  height: 40px;   
-  
-}
 
-/* .layer-btn:is(:hover, :focus-visible) {
-  --active: 1;
-} */
+  .layer-btn {
+    --active: 1;
+    position: relative;
+    padding: 0;
+    border: 0;
+    background: transparent;
 
-.layer-btn:active {
-  --active: 0;
-}
+      transform: rotate3d(2,2,10,-2deg); 
+    
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: white; 
+    width: 180px;          /* ✅ fixed width */
+    height: 40px;   
+    
+  }
 
-.layer-btn span {
-  inset: 0;
-  position: absolute;
-  display: grid;
-  place-items: center;
-  border: 2px solid black;
-  transition: 0.2s ease;
-  background: var(--bg);
-  translate:
-    calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
-    calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
-}
+  /* .layer-btn:is(:hover, :focus-visible) {
+    --active: 1;
+  } */
 
-.layer-btn span:first-of-type {
-  position: relative;
-  padding: var(--padding);
-}
+  .layer-btn:active {
+    --active: 0;
+  }
 
-.layer-btn span:nth-of-type(1) {
-  --bg: var(--bg-color-3);
-}
+  .layer-btn span {
+    inset: 0;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border: 2px solid black;
+    transition: 0.2s ease;
+    background: var(--bg);
+    translate:
+      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
+  }
 
-.layer-btn span:nth-of-type(2) {
-  --coefficient: 1;
-  --bg: var(--bg-color-2);
-}
+  .layer-btn span:first-of-type {
+    position: relative;
+    padding: var(--padding);
+  }
 
-.layer-btn span:nth-of-type(3) {
-  --coefficient: 2;
-  --bg: var(--bg-color-1);
-}
+  .layer-btn span:nth-of-type(1) {
+    --bg: var(--bg-color-3);
+  }
 
-[aria-hidden] {
-  color: transparent;
-}
+  .layer-btn span:nth-of-type(2) {
+    --coefficient: 1;
+    --bg: var(--bg-color-2);
+  }
+
+  .layer-btn span:nth-of-type(3) {
+    --coefficient: 2;
+    --bg: var(--bg-color-1);
+  }
+
+  [aria-hidden] {
+    color: transparent;
+  }
