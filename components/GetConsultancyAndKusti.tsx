@@ -44,7 +44,7 @@ function GetConsultancyFormandKusti({
   return (
     <div className="w-full  translate-y-10 rounded-[50px] border overflow-hidden">
       {/* Header */}
-      <div className="bg-primarysec text-3xl text-secondary text-center py-3 font-semibold font-amaranath">
+      <div className="bg-primarysec text-2xl text-secondary text-center py-3 font-semibold font-amaranath">
         {title}
       </div>
 
@@ -135,6 +135,10 @@ function GetConsultancyFormandKusti({
 
           <Button title={buttonTitle} type="gradient" onClick={handleSubmit} />
         </div>
+      </div>
+
+      <div className="bg-primarysec text-3xl text-secondary text-center py-6 font-semibold font-amaranath">
+        {" "}
       </div>
     </div>
   );

@@ -6,10 +6,15 @@ import { CTAButton, Navigation } from "../page";
 import GetConsultancyFormandKusti from "@/components/GetConsultancyAndKusti";
 
 import Remaining from "@/components/HomePage/Remaining";
+import MySvg from "@/components/MySvg";
+import Skew3DButton from "@/components/Skew3DButton";
 
 const Page = () => {
   return (
     <div className="h-screen w-full">
+      {/* <div className="my-10">
+        <Skew3DButton />
+      </div> */}
       <div
         className="
           w-full h-full
