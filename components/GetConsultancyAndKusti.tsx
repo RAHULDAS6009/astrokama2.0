@@ -44,7 +44,7 @@ function GetConsultancyFormandKusti({
   return (
     <div className="w-full  translate-y-10 rounded-[50px] border overflow-hidden">
       {/* Header */}
-      <div className="bg-primarysec text-2xl text-secondary text-center py-3 font-semibold font-amaranath">
+      <div className="bg-primarysec text-3xl text-secondary text-center py-3 font-semibold font-amaranath">
         {title}
       </div>
 
@@ -147,7 +147,7 @@ function GetConsultancyFormandKusti({
 /* ---------------- SMALL COMPONENTS ---------------- */
 
 const FormLabel = ({ text }: { text: string }) => (
-  <label className="text-white text-[24px] block mb-1 font-franklin libre-franklin-medium ">
+  <label className="text-white text-[16px] block mb-1 font-franklin libre-franklin-medium ">
     {text}
   </label>
 );

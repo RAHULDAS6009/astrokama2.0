@@ -92,7 +92,7 @@ export function Navigation() {
             }}
             className={`${
               activeTab(nav.url) ? "text-orange-400" : "text-white"
-            } text-[12px] cursor-pointer`}
+            } text-[14px] cursor-pointer`}
           >
             {nav.title}
           </div>
@@ -104,9 +104,9 @@ export function Navigation() {
 
 export function CTAButton() {
   return (
-    <button className="layer-btn h-14">
-      <span className="h-14"></span>
-      <span className="font-amaranath text-amber-200 h-14 text-2xl lg:text-3xl">
+    <button className="layer-btn h-12">
+      <span className="h-12"></span>
+      <span className="font-amaranath text-amber-200 h-12 text-xl lg:text-2xl">
         Book Now
       </span>
     </button>
