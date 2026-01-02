@@ -42,9 +42,9 @@ function GetConsultancyFormandKusti({
   };
 
   return (
-    <div className="w-full  translate-y-10 rounded-[50px] border overflow-hidden">
+    <div className="  translate-y-10 rounded-[50px] border overflow-hidden">
       {/* Header */}
-      <div className="bg-primarysec text-3xl text-secondary text-center py-3 font-semibold font-amaranath">
+      <div className={`bg-primarysec ${title==="আপনার জন্মরাশি ও লগ্ন জেনে নিন" ? "text-xl": "text-3xl" }  text-secondary text-center py-3 font-semibold font-amaranath`}>
         {title}
       </div>
 

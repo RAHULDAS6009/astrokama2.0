@@ -57,7 +57,7 @@ function Hero(){
                 </div>
               </div>
 
-              <div className="w-full ">
+              <div className="w-full translate-y-3 ">
                 <Image
                   src="/dummyBanner.png"
                   alt="banner"

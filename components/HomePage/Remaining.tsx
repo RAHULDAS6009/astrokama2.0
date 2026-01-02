@@ -9,23 +9,23 @@ import HoroscopeResult from "../GenerateHoroscope";
 
 export const Remaining = () => {
   return (
-    <div className="">
-      <div className="w-full h-full flex">
-        <div className="w-[63%] bg-primary h-full">
+    <div className="bg-secondary">
+      <div className="pt-12 w-full h-full flex">
+        <div className="w-[70%] bg-primary rounded-r-2xl  h-full">
           <div className=" space-y-12 ">
             {/* WHY + HOW */}
             <VideoBackgroundSection />
             {/* REMEDIES */}
-            <h3 className="text-orange-400 font-archivo archivo-normal font-semibold text-4xl mb-8 text-center  pt-8">
+            <h3 className="text-orange-400 font-archivo archivo-normal font-semibold text-5xl mb-8 text-center  pt-8">
               Remedies I Offer:
             </h3>
             <CircularAvatarCarousel />
             {/* PHILOSOPHY */}
             <div className="text-center h-full bg-secondary py-10 px-8">
-              <h3 className="text-lime-400  mb-4  font-archivo archivo-normal font-semibold text-4xl">
+              <h3 className="text-lime-400  mb-4  font-archivo archivo-normal font-semibold text-5xl">
                 My Philosophy
               </h3>
-              <p className="text-sm text-gray-200 leading-relaxed">
+              <p className="text-sm text-gray-200 leading-relaxed text-left">
                 Astrology, in its practice, is never meant to force or overpower
                 destiny, but to guide one with clarity and awareness. The true
                 purpose of astrology is to illuminate the path of life with
@@ -33,7 +33,7 @@ export const Remaining = () => {
                 make informed decisions with confidence.
               </p>
 
-              <p className="text-sm text-gray-200 leading-relaxed">
+              <p className="text-sm text-gray-200 leading-relaxed text-right mt-4">
                 Astrology, in its practice, is never meant to force or overpower
                 destiny, but to guide one with clarity and awareness. The true
                 purpose of astrology is to illuminate the path of life with
@@ -51,12 +51,12 @@ export const Remaining = () => {
           </div>
         </div>
 
-        <div className="w-[37%]  bg-[#3c1728] flex flex-col ">
+        <div className="w-[30%]  bg-[#3c1728] flex flex-col ">
           <div className="max-w-[500px] mx-auto  flex items-center">
             <TestimonialCards />
           </div>
 
-          <div className="mx-auto max-w-[500px]">
+          <div className="mx-auto max-w-[400px]">
             <GetConsultancyFormandKusti
               title="আপনার জন্মরাশি ও লগ্ন জেনে নিন"
               buttonTitle="Click For Next Process"
@@ -84,7 +84,7 @@ const services = [
 function ServicesOffered() {
   return (
     <section className="py-20 bg-[#2b0014]">
-      <h2 className="text-center text-orange-400 font-semibold mb-12 font-archivo archivo-normal text-4xl">
+      <h2 className="text-center text-orange-400 font-semibold mb-12 font-archivo archivo-normal text-5xl">
         Services Offered
       </h2>
 

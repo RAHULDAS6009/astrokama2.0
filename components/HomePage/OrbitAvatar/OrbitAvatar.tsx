@@ -17,7 +17,7 @@ type CarouselItem = ServiceItem | ArrowItem;
 
 const CircularAvatarCarousel: React.FC = () => {
   const centerService = {
-    name: "Modern Astrology Remedies",
+    name: "Modern Astrology ",
     color: "bg-[#ffffd0] border-[#d90429] text-[#000]",
   };
   const services = [
@@ -101,7 +101,6 @@ const CircularAvatarCarousel: React.FC = () => {
           height: inherit;
           pointer-events: auto;
           border-radius: 100%;
-          border: 4px solid; /* Generic border width, color comes from props */
           transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
           display: flex;
           align-items: center;
@@ -179,7 +178,7 @@ const CircularAvatarCarousel: React.FC = () => {
             style={{ "--index": index } as React.CSSProperties}
           >
             {item.type === "service" ? (
-              <div className={`circle-item ${item.color} border-[#d90429]`}>
+              <div className={`circle-item ${item.color} `}>
                 {item.name}
               </div>
             ) : (

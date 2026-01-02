@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 
 export function Header() {
   return (
-    <div className="w-full grid grid-cols-5 ">
-      <div className="col-span-1 flex justify-end -translate-y-2">
+    <div className="w-full flex items-center justify-between ">
+      <div className="  -translate-y-5">
         <Logo />
       </div>
-      <div className="col-span-2 flex items-end justify-center pb-1">
+      <div className=" flex items-baseline mt-6 justify-center pb-1">
         <Navigation />
       </div>
-      <div className="col-span-2   flex justify-center items-center">
+      <div className="   flex justify-center items-center pr-4 pb-4">
         <div className="flex gap-5 translate-y-6">
-          <span className="font-amaranath text-amber-200 text-2xl lg:text-3xl">
+          <span className="font-amaranath text-amber-200 text-2xl lg:text-2xl">
             +91 9748 5888 62
           </span>
           <CTAButton />

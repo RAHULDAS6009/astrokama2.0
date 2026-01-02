@@ -97,7 +97,7 @@ export function VideoBackgroundSection() {
     <section className="relative min-h-[80vh] px-10 m-10 overflow-hidden flex items-center justify-center">
       {/* BACKGROUND VIDEO */}
       <video
-        className="absolute inset-0 w-full h-full object-cover rounded-[5rem]"
+        className="absolute inset-0 w-full h-full object-cover rounded-[5rem] "
         src="/servicesVideo.mp4"
         autoPlay
         muted
@@ -179,9 +179,9 @@ export function VideoBackgroundSection() {
           </h3>
 
           <ul className="font-amaranath space-y-3  px-8 text-sm leading-relaxed">
-            <li>Phone Call</li>
-            <li>Video Calls</li>
-            <li>Offline Session at my chamber tollygunge</li>
+            <li>📞 Phone Call</li>
+            <li>📹 Video Calls</li>
+            <li>🤝 Offline Session at my chamber tollygunge</li>
           </ul>
         </div>
       </div>

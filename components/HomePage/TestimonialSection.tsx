@@ -67,7 +67,7 @@ const testimonialData: TestimonialData[] = [
 
 const TestimonialCard: React.FC<{ data: TestimonialData }> = ({ data }) => {
   return (
-    <div className="w-80 h-[330px] bg-[#492736] rounded-3xl px-4 pb-4 relative shadow-xl h-[220px]">
+    <div className="w-76 h-[330px] bg-[#492736] rounded-3xl px-4 pb-4 relative shadow-xl h-[220px]">
       {/* Arrow Button */}
       <div className="absolute top-6 right-6 ">
         <button className="w-10 h-10 border-3 border-orange-500 rounded-full flex items-center justify-center hover:bg-orange-800 transition-colors">
@@ -147,11 +147,11 @@ export default function TestimonialCards() {
       {/* HEADER */}
       <div className="pt-20 space-y-4">
         <div className="w-full flex justify-center">
-          <div className="w-24 px-3 py-1 bg-orange-500 text-[8px] text-white rounded-md text-center">
+          <div className="w-32 px-3 py-1 bg-orange-500 text-[10px] text-white rounded-md text-center">
             Client Testimonial
           </div>
         </div>
-        <h3 className="text-4xl text-center text-white font-semibold">
+        <h3 className="text-3xl text-center text-white font-semibold px-4">
           What our Clients Say About Working With Us
         </h3>
       </div>
