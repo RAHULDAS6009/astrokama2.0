@@ -3,7 +3,7 @@ import { X, Play } from "lucide-react";
 
 // Use environment variable
 const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-const CHANNEL_ID = process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_ID;
+const CHANNEL_ID = "UCHrIkvzbuAHabjBCMZakdpw";
 
 const LatestVideos = () => {
   const [videos, setVideos] = useState<any[]>([]);
@@ -14,19 +14,19 @@ const LatestVideos = () => {
     const loadInfiniteVideos = async () => {
       try {
         if (!API_KEY) {
-            console.error("YouTube API Key is missing");
-            return;
+          console.error("YouTube API Key is missing");
+          return;
         }
 
         const res = await fetch(
           `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=8`
         );
         const data = await res.json();
-console.log(data)
+        console.log(data);
         if (data.error) {
-            console.error("YouTube API Error:", data.error);
-            setError("Failed to load videos");
-            return;
+          console.error("YouTube API Error:", data.error);
+          setError("Failed to load videos");
+          return;
         }
 
         const filtered = data.items.filter((v: any) => v.id.videoId);
@@ -59,15 +59,15 @@ console.log(data)
               className="w-[240px] sm:w-[300px] aspect-video rounded-xl overflow-hidden shadow-lg bg-black flex-shrink-0 cursor-pointer group relative"
               onClick={() => setSelectedVideo(video.id.videoId)}
             >
-              <img 
-                src={video.snippet.thumbnails.high.url} 
+              <img
+                src={video.snippet.thumbnails.high.url}
                 alt={video.snippet.title}
                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/0 transition-colors">
-                 <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                    <Play fill="white" className="text-white ml-1" size={20} />
-                 </div>
+                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+                  <Play fill="white" className="text-white ml-1" size={20} />
+                </div>
               </div>
             </div>
           ))}
@@ -76,7 +76,7 @@ console.log(data)
 
       {/* Video Modal */}
       {selectedVideo && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
           onClick={() => setSelectedVideo(null)}
         >
@@ -89,7 +89,7 @@ console.log(data)
           >
             <X size={32} color="#ffffff" strokeWidth={3} />
           </button>
-          
+
           <div className="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
             <iframe
               className="w-full h-full"
@@ -108,7 +108,9 @@ console.log(data)
             transform: translateX(0);
           }
           to {
-            transform: translateX(-33.333%); /* Move exactly 1 set width (since we have 3 sets) */
+            transform: translateX(
+              -33.333%
+            ); /* Move exactly 1 set width (since we have 3 sets) */
           }
         }
 

@@ -2,6 +2,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export function Header() {
+  const pathname = usePathname();
+  // Check if pathname exists and starts with /studentcorner
+  // Removing the contact info section for all pages under /studentcorner
+  const isStudentCorner = pathname?.startsWith("/studentcorner/");
+
   return (
     <div className="w-full flex items-center justify-between ">
       <div className="  -translate-y-5">
@@ -10,14 +15,16 @@ export function Header() {
       <div className=" flex items-baseline mt-6 justify-center pb-1">
         <Navigation />
       </div>
-      <div className="   flex justify-center items-center pr-4 pb-4">
-        <div className="flex gap-5 translate-y-6">
-          <span className="font-amaranath text-amber-200 text-2xl lg:text-2xl">
-            +91 9748 5888 62
-          </span>
-          <CTAButton />
+      {!isStudentCorner && (
+        <div className="   flex justify-center items-center pr-4 pb-4">
+          <div className="flex gap-5 translate-y-6">
+            <span className="font-amaranath text-amber-200 text-2xl lg:text-2xl">
+              +91 9748 5888 62
+            </span>
+            <CTAButton />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

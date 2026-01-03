@@ -6,51 +6,7 @@ const CourseHero = () => {
     <section className="bg-primary text-white overflow-hidden">
       {/* Top Banner Strip */}
 
-      {/* Banner Text Section */}
-      <div className=" text-center mt-4 relative">
-        <div className="container mx-auto ">
-          <div className="flex items-center justify-center">
-            <Image
-              src="/modernastrology.png"
-              alt="Modern Astrology"
-              width={150}
-              height={150}
-            />
-
-            <div>
-              <h1 className="text-4xl md:text-7xl font-amaranath text-orange-500 font-bold mb-2 tracking-wider">
-                MODERN ASTROLOGY
-              </h1>
-              <p className="text-sm md:text-base text-orange-200/80 mb-2 tracking-[.06em]">
-                A Unit of: Krishnamurti Academy of Modern Astrology & Spiritual
-                Development - ESTD. 2018
-              </p>
-            </div>
-          </div>
-
-          <div className="text-[10px] md:text-xs text-orange-200/60 flex flex-wrap justify-center gap-2 md:gap-4 uppercase tracking-wider">
-            <span className="text-[#ffb6b6]">
-              Registered Under Government of West Bengal & Government of India
-            </span>
-            <span>•</span>
-            <span className="text-[#ffb6b6]">ISO Certified Institute</span>
-            <span>•</span>
-            <span className="text-[#e5a300]">
-              Registered Number Provided After Course Completion
-            </span>
-            <span>•</span>
-            <span className="text-[#ffb6b6]">
-              Official Certificate Every Semester
-            </span>
-          </div>
-          <div className="mt-4 py-2 bg-linear-to-r from-[#2D0C1F] to-[#4a1228] border-b-2 border-[#e5a300]">
-            <p className="text-[#ffb6b6] text-lg font-amranath font-bold tracking-wide">
-              A New Path in Astrology ~~ Practical Prediction for Modern
-              Lifestyles
-            </p>
-          </div>
-        </div>
-      </div>
+      <ModernAstrologyHeader />
 
       {/* Main Hero Content */}
       <div className="">
@@ -125,5 +81,58 @@ const CourseHero = () => {
     </section>
   );
 };
+
+export function ModernAstrologyHeader() {
+  return (
+    <div>
+      <h2>
+        <div className=" text-center mt-4 relative">
+          <div className="container mx-auto ">
+            <div className="flex items-center justify-center">
+              <Image
+                src="/modernastrology.png"
+                alt="Modern Astrology"
+                width={150}
+                height={150}
+              />
+
+              <div>
+                <h1 className="text-4xl md:text-7xl font-amaranath text-orange-500 font-bold mb-2 tracking-wider">
+                  MODERN ASTROLOGY
+                </h1>
+                <p className="text-sm md:text-base text-orange-200/80 mb-2 tracking-[.06em]">
+                  A Unit of: Krishnamurti Academy of Modern Astrology &
+                  Spiritual Development - ESTD. 2018
+                </p>
+              </div>
+            </div>
+
+            <div className=" tracking-tight text-[10px] md:text-xs text-orange-200/60 flex flex-wrap justify-center gap-2 font-bold   ">
+              <span className="text-[#ffb6b6]">
+                Registered Under Government of West Bengal & Government of India
+              </span>
+              <span>•</span>
+              <span className="text-[#ffb6b6]">ISO Certified Institute</span>
+              <span>•</span>
+              <span className="text-[#e5a300]">
+                Registered Number Provided After Course Completion
+              </span>
+              <span>•</span>
+              <span className="text-[#ffb6b6]">
+                Official Certificate Every Semester
+              </span>
+            </div>
+            <div className="mt-4 py-2 bg-linear-to-r from-[#2D0C1F] to-[#4a1228] border-b-2 border-[#e5a300]">
+              <p className="text-[#ffb6b6] text-lg font-amranath font-bold tracking-wide">
+                A New Path in Astrology ~~ Practical Prediction for Modern
+                Lifestyles
+              </p>
+            </div>
+          </div>
+        </div>
+      </h2>
+    </div>
+  );
+}
 
 export default CourseHero;
