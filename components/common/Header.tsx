@@ -24,14 +24,14 @@ export function Header() {
 
 export function Logo() {
   return (
-    <div className="flex flex-col     h-full lg:pl-5  lg:pt-10   justify-center ">
+    <div className="flex flex-col   w-full    h-full lg:pl-5  lg:pt-10   justify-center ">
       <span className="courgette-regular text-orange-500 text-xl lg:text-2xl w-full ">
-        Astrologer Suvendu paul
+        Astrologer Suvendu Paul
       </span>
       <div>
-        <span className=" text-xs lg:text-xl rounded-md px-2 bg-white text-primary font-amaranath text-center ">
+        <div className=" text-xs w-full lg:text-xl rounded-md px-2 bg-white text-primary font-amaranath text-center ">
           Krishnamurti Paddhati
-        </span>
+        </div>
       </div>
     </div>
   );

@@ -1,25 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import {
-  ScanEye,
-  Hand,
-  Binary,
-  Compass,
-  Sparkles,
-  Flame,
-  Gem,
-} from "lucide-react";
 
 const services = [
-  { icon: ScanEye, label: "KP Horoscope Analysis" },
-  { icon: Hand, label: "Palmistry" },
-  { icon: Binary, label: "Numerology" },
-  { icon: Compass, label: "Vastu" },
-  { icon: Sparkles, label: "Reiki" },
-  { icon: Flame, label: "Kavacha Puja" },
-  { icon: Gem, label: "Remedies" },
+  { icon: "/kpastrologyanalysis.png", label: "KP Horoscope Analysis" },
+  { icon: "/palmistry.png", label: "Palmistry" },
+  { icon: "/numerology.png", label: "Numerology" },
+  { icon: "/vastu.png", label: "Vastu" },
+  { icon: "/reiki.png", label: "Reiki" },
+  { icon: "/kavachapuja.png", label: "Kavacha Puja" },
+  { icon: "/remedies.png", label: "Remedies" },
 ];
-
 const AboutModernAstrology = () => {
   return (
     <section className="bg-primary py-10 overflow-hidden">
@@ -28,10 +18,13 @@ const AboutModernAstrology = () => {
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
           {services.map((service, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-[2rem] bg-[#E8C4A8] border-2 border-orange-300 flex items-center justify-center shadow-lg shadow-black/30 hover:scale-105 transition-transform duration-300">
-                <service.icon
-                  className="w-10 h-10 md:w-12 md:h-12 text-[#3c1728]"
-                  strokeWidth={1.5}
+              <div className="w-20 h-20 md:w-24 md:h-24  rounded-[2rem] bg-[#E8C4A8] border-2 border-orange-300 flex items-center justify-center shadow-lg shadow-black/30 hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={service.icon}
+                  alt={service.label}
+                  width={48}
+                  height={48}
+                  className="w-10 h-10 md:w-12 md:h-12 object-contain"
                 />
               </div>
               <span className="text-[#E8C4A8] font-bold text-center text-sm md:text-base leading-tight max-w-[100px] font-amaranath">
@@ -83,7 +76,7 @@ const AboutModernAstrology = () => {
 
             {/* Right Text Content */}
             <div className="w-full lg:w-1/2">
-              <div className="bg-[#3c1728] p-6 md:p-8 rounded-3xl border border-orange-300/20 shadow-inner">
+              <div className="bg-linear-to-br from-[#2D0C1F] via-[#601030] to-[#2D0C1F] p-6 md:p-8 rounded-3xl border border-[#E8C4A8] shadow-2xl">
                 <p className="text-[#EDDCD2] font-serif italic text-lg md:text-xl leading-relaxed text-justify">
                   The Modern Astrology Institute was founded in 2018 to make
                   astrology relevant for modern life. KP Astrology was chosen as
@@ -100,11 +93,24 @@ const AboutModernAstrology = () => {
           </div>
 
           {/* Bottom Bengali/Text Section Placeholder */}
-          <div className="mt-12 p-6 md:p-8 rounded-3xl border border-orange-300/30 bg-[#3c1728] text-center">
-            <p className="text-[#EDDCD2] font-serif text-lg leading-relaxed opacity-80">
-              (Content in regional language about the institute&apos;s mission
-              and vision would appear here. It describes the unique approach of
-              combining traditional wisdom with modern scientific outlook.)
+          <div className="mt-12 p-6 md:p-8 rounded-3xl border border-orange-300/30 bg-linear-to-br  from-[#2D0C1F] via-[#601030] to-[#2D0C1F] text-center">
+            <p className="text-[#EDDCD2] font-serif text-lg leading-relaxed opacity-80 ">
+              The Modern Astrology Institute was founded in 2018 to make
+              astrology relevant for modern life. KP Astrology was chosen as the
+              foundation, but prediction was recognized as needing refinement.
+              In today's fast-paced world, astrology must evolve to match modern
+              challenges and thinking. Modern Astrology was therefore created as
+              a new system of guidance. It blends KP's scientific precision with
+              innovative methods. The goal is to guide people not only through
+              charts but also through practical life journeys The Modern
+              Astrology Institute was founded in 2018 to make astrology relevant
+              for modern life. KP Astrology was chosen as the foundation, but
+              prediction was recognized as needing refinement. In today's
+              fast-paced world, astrology must evolve to match modern challenges
+              and thinking. Modern Astrology was therefore created as a new
+              system of guidance. It blends KP's scientific precision with
+              innovative methods. The goal is to guide people not only through
+              charts but also through practical life journeys
             </p>
           </div>
         </div>

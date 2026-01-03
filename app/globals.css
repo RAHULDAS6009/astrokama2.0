@@ -1,4 +1,5 @@
-  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
   @import "tailwindcss";
 
@@ -10,6 +11,8 @@
     --font-alkatra: "Alkatra";
 
     --font-anton: "Anton";
+
+    --font-alegreya-sans: "Alegreya Sans";
 
     --font-archivo: "Archivo";
 
@@ -33,6 +36,92 @@
     --font-family: monospace;
     --step: 0.5rem;
   }
+
+.alegreya-sans-thin {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.alegreya-sans-light {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.alegreya-sans-regular {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alegreya-sans-medium {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.alegreya-sans-bold {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.alegreya-sans-extrabold {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.alegreya-sans-black {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.alegreya-sans-thin-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.alegreya-sans-light-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.alegreya-sans-regular-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.alegreya-sans-medium-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.alegreya-sans-bold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.alegreya-sans-extrabold-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.alegreya-sans-black-italic {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 
   .anton-regular {
     font-family: "Anton", sans-serif;
