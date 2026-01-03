@@ -1,28 +1,31 @@
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Archivo:ital,wdth@0,104;1,104&family=Courgette&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:ital,wght@0,500;1,500&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
   @import "tailwindcss";
 
 
 
   @theme {
-    --font-franklin:"Franklin";
-    --font-amaranath:"Amaranth";
-    --font-alkatra:"Alkatra";
+    --font-franklin: "Franklin";
+    --font-amaranath: "Amaranth";
+    --font-alkatra: "Alkatra";
 
-    --font-archivo:"Archivo";
+    --font-anton: "Anton";
 
-    --font-courgette:"Courgette";
-    
-    --color-primary: #280116; /* Tailwind generates utility classes from this */
-    --color-secondary:#3c1728;
-    --color-primarysec:#d1c1b4;
+    --font-archivo: "Archivo";
 
-    --color-formbg:#6c4758;
-    --color-ctabtn:#cb2d73;
-    --color-navbg:#482739;
-    --color-text:#280116;
-    --color-ctabtn2:#016993;
-    --color-nxtprocessbg:#9fc9e4;
+    --font-courgette: "Courgette";
+
+    --color-primary: #280116;
+    /* Tailwind generates utility classes from this */
+    --color-secondary: #3c1728;
+    --color-primarysec: #d1c1b4;
+
+    --color-formbg: #6c4758;
+    --color-ctabtn: #cb2d73;
+    --color-navbg: #482739;
+    --color-text: #280116;
+    --color-ctabtn2: #016993;
+    --color-nxtprocessbg: #9fc9e4;
     /* --bg-color-1: #cb2d73; */
     --bg-color-2: #cb2d73;
     --bg-color-3: #15abe6;
@@ -30,6 +33,13 @@
     --font-family: monospace;
     --step: 0.5rem;
   }
+
+  .anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 
 
 
@@ -57,7 +67,7 @@
   }
 
 
-  .angled-background{
+  .angled-background {
     background-image: linear-gradient(180deg, red 70%, yellow 70%)
   }
 
@@ -77,15 +87,16 @@
     border: 0;
     background: transparent;
 
-      transform: rotate3d(2,2,10,-2deg); 
-    
+    transform: rotate3d(2, 2, 10, -2deg);
+
     cursor: pointer;
     font-family: var(--font-family);
     font-weight: bold;
-    color: white; 
-    width: 180px;          /* ✅ fixed width */
-    height: 40px;   
-    
+    color: white;
+    width: 180px;
+    /* ✅ fixed width */
+    height: 40px;
+
   }
 
   /* .layer-btn:is(:hover, :focus-visible) {
@@ -105,8 +116,7 @@
     transition: 0.2s ease;
     background: var(--bg);
     translate:
-      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
-      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
+      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1)) calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
   }
 
   .layer-btn span:first-of-type {
@@ -130,4 +140,21 @@
 
   [aria-hidden] {
     color: transparent;
+  }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient-flow {
+    background-size: 200% 200%;
+    animation: gradient-flow 3s ease infinite;
   }

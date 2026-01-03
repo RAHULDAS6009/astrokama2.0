@@ -47,7 +47,7 @@ const navLinks = [
   },
   {
     title: "Courses",
-    url: "/courses",
+    url: "/course",
   },
 
   {
